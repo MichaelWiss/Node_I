@@ -9,10 +9,11 @@ let helloMiddleware = (req, res, next) => {
 	next();
 }
 
-app.use(helloMiddleware);
+app.use('/', helloMiddleware);
 
 app.get('/', (req, res, next) => {
 	res.send('<h1>Hello Express!</h1>');
+	console.log(req.hello);
 });
 
 app.get('/dashboard', (req, res, next) => {
