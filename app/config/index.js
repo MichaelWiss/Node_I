@@ -7,7 +7,7 @@ if(process.env.NODE_ENV === 'production') {
 		dbURI: process.env.dbURI,
 		sessionSecret: process.env.sessionSecret
 	}
-	else {
+	} else {
 		//offer dev stage settings and data
 		module.exports = require('./development.json');
 	}
