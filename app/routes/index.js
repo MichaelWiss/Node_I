@@ -16,6 +16,9 @@ module.exports = () => {
 		},
 		'post': {
 
+		},
+		'NA': (req, res, next) => {
+			
 		}
 	}
 
