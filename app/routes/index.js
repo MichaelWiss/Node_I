@@ -15,6 +15,10 @@ module.exports = () => {
 			},
 			'/getsession': (req, res, next) => {
 				res.send("My favorite color: " + req.session.favColor);
+			},
+			'/setSession': (req, res, next) => {
+				req.session.favColor = "Red";
+				res.send("Session Set");
 			}
 		},
 		'post': {
