@@ -5,6 +5,7 @@
 	"fb": {
 		"clientID": "1488366374559229",
 		"clientSecret": "274f5203f6ae04cf7f9a557ee8100846",
-		"callbackURL": "//localhost:3000/auth/facebook/callback"
+		"callbackURL": "//localhost:3000/auth/facebook/callback",
+		"profileFields": ["id", "displayName", "photos"]
 	}
 }
