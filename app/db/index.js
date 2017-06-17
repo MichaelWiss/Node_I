@@ -8,6 +8,16 @@ Mongoose.connection.on('error', error => {
 	console.log("MongoDB Error ", error);
 });
 
+//create a schema 
+const chatUser = new Mongoose.Schema({
+  profileId: String,
+  fullName: String,
+  profilePic: String
+});
+
+//turn into a model
+let userModel = Mongoose.model('chatUser', chatUser);
+
 module.exports = {
 	Mongoose
 }
