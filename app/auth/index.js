@@ -10,6 +10,12 @@ module.exports = () => {
 
 		// if the user is found, return the user data using the done()
 		// if the user is not found, create one in the local db and return
+		h.findOne(profile.id)
+		.then(result => {
+          if (result) {
+          	done(null, result);
+          }
+		});
 	}
 	passport.use(new FacebookStrategy(config.fb, (accessToken, refreshToken, profile, done => {
 
