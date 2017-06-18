@@ -19,5 +19,6 @@ const chatUser = new Mongoose.Schema({
 let userModel = Mongoose.model('chatUser', chatUser);
 
 module.exports = {
-	Mongoose
+	Mongoose,
+	userModel
 }
