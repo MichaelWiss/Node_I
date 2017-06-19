@@ -7,7 +7,13 @@ const FacebookStrategy = require('passport-facebook').Strategy;
 module.exports = () => {
 	passport.serializeUser((user, done) => {
 		done(null, user.id);
-	})
+	});
+
+    passport.deserializeUser((id, done) => {
+    	// Find the user using the _id
+    });
+
+
 	let authProcessor = (accessToken, refreshToken, profile, done) => {
 		// find a user in local db using profile.id
 
