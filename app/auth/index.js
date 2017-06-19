@@ -5,6 +5,9 @@ const h = require('../helpers');
 const FacebookStrategy = require('passport-facebook').Strategy;
 
 module.exports = () => {
+	passport.serializeUser((user, done) => {
+		done(null, user.id);
+	})
 	let authProcessor = (accessToken, refreshToken, profile, done) => {
 		// find a user in local db using profile.id
 
