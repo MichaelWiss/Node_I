@@ -32,6 +32,13 @@ let findOne = profileID => {
     })
 }
 
+//create a new user and returns that instance
+let createNewUser = profile => {
+    return new Promise((resolve, reject) => {
+
+    });
+}
+
 module.exports = {
 	route: route
 }
