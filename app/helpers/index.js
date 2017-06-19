@@ -35,6 +35,18 @@ let findOne = profileID => {
 //create a new user and returns that instance
 let createNewUser = profile => {
     return new Promise((resolve, reject) => {
+        let newChatUser = new db.userModel({
+            profileId: profile.id,
+            fullName: profile.displayName,
+            profilePic: profile.photos[0].value || ''
+        });
+
+        newChatUser.save(error => {
+            if(error) {
+                console.log('Create New User Error');
+                reject(error);
+            }
+        })
 
     });
 }
