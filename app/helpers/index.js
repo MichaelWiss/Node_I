@@ -66,4 +66,5 @@ module.exports = {
 	route,
     findOne,
     createNewUser
+    findById
 }

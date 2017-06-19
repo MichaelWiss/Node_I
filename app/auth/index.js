@@ -11,6 +11,8 @@ module.exports = () => {
 
     passport.deserializeUser((id, done) => {
     	// Find the user using the _id
+    	h.findById(id)
+    	  .then(user => done(null, user))
     });
 
 
