@@ -15,7 +15,7 @@ module.exports = () => {
           if (result) {
           	done(null, result);
           } else {
-          	
+          	h.createNewUser(profile)
           }
 		});
 	}

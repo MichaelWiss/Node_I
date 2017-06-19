@@ -45,12 +45,15 @@ let createNewUser = profile => {
             if(error) {
                 console.log('Create New User Error');
                 reject(error);
+            } else {
+                resolve(newChatUser);
             }
-        })
-
+        });
     });
 }
 
 module.exports = {
-	route: route
+	route,
+    findOne,
+    createNewUser
 }
