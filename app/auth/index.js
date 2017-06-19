@@ -1,6 +1,6 @@
 'use strict';
 const passport = require('passport');
-const config = require('.config');
+const config = require('../config');
 const h = require('../helpers');
 const FacebookStrategy = require('passport-facebook').Strategy;
 
