@@ -1,5 +1,6 @@
 'use strict';
 const h = require('../helpers');
+const passport = require('passport');
 
 module.exports = () => {
 	let routes = {
@@ -19,7 +20,8 @@ module.exports = () => {
 			'/setSession': (req, res, next) => {
 				req.session.favColor = "Red";
 				res.send("Session Set");
-			}
+			},
+			'/auth/facebook': passport.authenticate('facebook')
 		},
 		'post': {
 
