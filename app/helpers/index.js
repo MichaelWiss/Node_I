@@ -43,7 +43,6 @@ let createNewUser = profile => {
 
         newChatUser.save(error => {
             if(error) {
-                console.log('Create New User Error');
                 reject(error);
             } else {
                 resolve(newChatUser);
