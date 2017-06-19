@@ -11,6 +11,7 @@ app.set('view engine', 'ejs');
 
 app.use(chatCat.session);
 app.use(passport.initialize());
+app.use(passport.session());
 
 app.use('/', chatCat.router);
 
