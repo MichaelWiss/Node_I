@@ -21,7 +21,11 @@ module.exports = () => {
 				req.session.favColor = "Red";
 				res.send("Session Set");
 			},
-			'/auth/facebook': passport.authenticate('facebook')
+			'/auth/facebook': passport.authenticate('facebook'),
+			'/auth/facebook/callback': passport.authenticate('facebook', {
+				successRedirect: '/rooms',
+				failureRedirect: '/'
+			})
 		},
 		'post': {
 

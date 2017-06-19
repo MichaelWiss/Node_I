@@ -1,6 +1,8 @@
 'use strict';
 const router = require('express').Router();
 const db = require('../db');
+const crypto = require('crypto');
+
 
 //iterate through the routes object and mount the routes
 let _registerRoutes = (routes, method) => {
@@ -50,6 +52,7 @@ let createNewUser = profile => {
         });
     });
 }
+// The ES6 promisified version of findById
 let findById = id => {
     return new Promise((resolve, reject) => {
         db.userModel.findById(id, (error, user) => {
@@ -65,6 +68,6 @@ let findById = id => {
 module.exports = {
 	route,
     findOne,
-    createNewUser
+    createNewUser,
     findById
 }
