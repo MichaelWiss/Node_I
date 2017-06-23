@@ -17,4 +17,5 @@ if(process.env.NODE_ENV === 'production') {
 	} else {
 		//offer dev stage settings and data
 		module.exports = require('./development.json');
+		//module.exports = require('../../variables.env');
 	}
