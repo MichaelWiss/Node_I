@@ -31,7 +31,7 @@ let route = routes => {
 let findOne = profileID => {
     return db.userModel.findOne({
         'profileId': profileID
-    })
+    });
 }
 
 //create a new user and returns that instance
